@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// crear un ArrayList vacio
+		// crear un ArrayList vac�o
 		ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
 		
 		// creamos el objeto de la clase Estudiante
@@ -32,7 +32,7 @@ public class Main {
 			estudiantes.add(new Estudiante(i, 55, 55555, 0, 0.0, Math.random()*10));
 		}
 		
-		//System.out.println(estudiantes.size());
+		System.out.println(estudiantes.size());
 		
 		
 		for (int i=0; i<estudiantes.size(); i++) {
@@ -44,10 +44,10 @@ public class Main {
 
 		
 		
-		// muestra por pantalla el numero de elementos
+		// muestra por pantalla el n�mero de elementos
 //		System.out.println(estudiantes.size());
 		
-		// acceder a un elemento por una posicion y guardarlo como objeto
+		// acceder a un elemento por una posici�n y guardarlo como objeto
 //		estudiante1 = estudiantes.get(0);
 //		System.out.println(estudiante2.getEdad());
 		
@@ -59,7 +59,7 @@ public class Main {
 //		}
 		
 		
-		// recorro el ArrayList desde la posicion inicial (0) hasta la posicion final
+		// recorro el ArrayList desde la posici�n inicial (0) hasta la posici�n final
 //		for (int i=0; i<estudiantes.size(); i++) {
 //			Estudiante nuevoEstudiante = estudiantes.get(i);
 //			System.out.printf("id: %d", nuevoEstudiante.getId()).println();
@@ -72,10 +72,10 @@ public class Main {
 //		Estudiante estudiante4 = new Estudiante(5, 55, 55555, 0, 0.0, 0.0);
 //		Estudiante estudiante5 = new Estudiante(5, 55, 55555, 0, 0.0, 0.0);
 		
-//		// invocacion a un metodo no estatico OBJETO.METODO_NO_ESTATICO
+//		// invocaci�n a un m�todo no est�tico OBJETO.METODO_NO_ESTATICO
 //		estudiante1.mostrarInfo();
 		
-		// invocacion a un metodo estatico: CLASE.METODO_ESTATICO
+		// invocaci�n a un m�todo est�tico: CLASE.METODO_ESTATICO
 //		Estudiante.crearEstudiante();
 
 	}
