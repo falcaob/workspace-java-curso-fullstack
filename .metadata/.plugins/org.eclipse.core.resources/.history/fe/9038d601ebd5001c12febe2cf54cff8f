@@ -32,7 +32,7 @@ public class Main {
 			estudiantes.add(new Estudiante(i, 55, 55555, 0, 0.0, Math.random()*10));
 		}
 		
-		System.out.println(estudiantes.size());
+		//System.out.println(estudiantes.size());
 		
 		
 		for (int i=0; i<estudiantes.size(); i++) {
