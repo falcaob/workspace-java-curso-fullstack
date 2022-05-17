@@ -1,0 +1,26 @@
+
+public class Coche {
+	
+	// declarando atributos
+	float velocidad;
+	float caballos;
+	int asientos;
+	int orientacionRuedas;
+	
+	// constructor
+	public Coche(float velocidad, float caballos, int asientos, int orientacionRuedas) {
+		System.out.println("Constructor de la clase Coche");
+		this.velocidad = velocidad;
+		this.caballos = caballos;
+		this.asientos = asientos;
+		this.orientacionRuedas = orientacionRuedas;
+	}
+	
+	// metodos
+	void parar () {}
+	void acelerar () {}
+	void desacelerar () {}
+	void girarIzquierda () {}
+	void girarDerecha () {}
+
+}

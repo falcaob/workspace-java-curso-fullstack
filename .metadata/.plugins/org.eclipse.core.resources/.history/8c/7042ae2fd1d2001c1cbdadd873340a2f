@@ -1,0 +1,24 @@
+
+public class Main3 {
+
+	public static void main(String[] args) {
+		// crear varios objetos de la clase Coche
+		// funciona Coche porque estan en el mismo paquete
+		// paquete es un conjunto de clases
+		Coche audi = new Coche(0.0f, 350.0f, 4, 0);
+		Coche nissan = new Coche(0.0f, 90.0f, 4, 0 );
+		
+		//System.out.println(audi.getCaballos());
+		//audi.setCaballos(230.0f);
+		//System.out.println(audi.getCaballos());
+		
+		float kw = Coche.convertirCvKw(350.0f);
+		System.out.println(kw);
+		
+		// crear varios objetos de la clase estudiante
+		Estudiante estudiante1 = new Estudiante(1, 25, 666666455, 0, 0.0, 0.0);
+		Estudiante estudiante2 = new Estudiante(2, 32);
+
+	}
+
+}

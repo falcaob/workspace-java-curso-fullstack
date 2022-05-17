@@ -1,0 +1,32 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+	
+		System.out.println("Hola Mundo");
+		System.out.println(5 + 2);
+		System.out.println(5 - 2);
+		System.out.println(5 * 2);
+		System.out.println(5 / 2);
+		System.out.println(5 % 2);
+		System.out.println(Math.pow(5, 2));
+		
+		// exercise 2 and 3
+		System.out.println("2*3");
+		System.out.println(2 * 3);
+		
+		// Escape sequences
+		System.out.println("\t\"Hola\nmundo\"");
+		System.out.println("\tHola\nMundo");
+		System.out.println(" \" ");	
+		System.out.println(" \\ ");
+		
+		/*
+		 * printf
+		 * el println hace el salto de línea
+		 */
+		System.out.printf("El producto de 5*2 = %d", 5*2).println();
+		
+	}
+
+}

@@ -1,0 +1,64 @@
+package curso;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		// crear un Array de objeto que tengo que guardar
+		// <> que tipo de objeto va a guardar
+		// estudiantes nombre array
+		ArrayList<Estudiante> estudiantes = new ArrayList<Estudiante>();
+	
+		// creamos objeto de la clase Estudiantes
+		Estudiante estudiante1 = new Estudiante(5, 55, 55555, 0, 0.0, 0.0);
+		
+		// insertamos el objeto de la clase Estudiante
+		estudiantes.add(estudiante1);
+		//estudiantes.add(estudiante);
+		
+		
+		//for(int i=0; i<estudiantes.size(); i++) {
+		//	Estudiante estudiante1 = estudiantes.get(i); 
+		//	System.out.println(estudiante1.getId());
+		//}
+		
+		// OTRA FORMA MAS SENCILLA
+		for (Estudiante estudiante2 : estudiantes) {
+			System.out.println(estudiante2.getId());
+		}
+		
+		
+		// muestra por pantalla el numero de elementos
+		// System.out.println(estudiantes.size());
+				
+		// acceder a un elemento por una posicion y guardarlo como objeto
+		Estudiante estudiante2 = estudiantes.get(0);
+		//System.out.println(estudiante2.getEdad());
+		
+		// para agregar 500 estudiantes
+		for (int i = 0; i <= 500; i++) {
+			Estudiante nuevoEstudiante = new Estudiante(i, 55, 55555, 0, 0.0, 0.0);
+			estudiantes.add(nuevoEstudiante);
+		}
+		
+		//System.out.println(estudiantes.size());
+		
+		// recorro el ArrayList desde la posicion inicial (0) hasta la posicion final 
+		for (int i = 0; i < estudiantes.size(); i++) {
+			//System.out.printf("id: %d", estudiantes.get(i).id).println();
+			Estudiante nuevoEstudiante = estudiantes.get(i);
+			System.out.printf("id: %d", nuevoEstudiante.getId()).println();
+		}
+		
+		
+		// invocacion objeto no estatico OBJETO.METODO_NO_ESTATICO
+		estudiante1.mostrarInfo();
+				
+		// invocacion a metodo estatico: CLASE.METODO_ESTATICO
+		Estudiante.crearEstudiante();
+
+	}
+
+}

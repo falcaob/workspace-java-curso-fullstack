@@ -1,0 +1,17 @@
+
+public class Estudiante {
+	
+	// atributos
+	int id;
+	int edad;
+	int telefono;
+	float numeroDeNotas;
+	float sumaDeNotas;
+	float notaMedia;
+	
+	// metodos
+	void mostrarInfo () {}
+	void agregarNuevaNota () {}
+	
+
+}

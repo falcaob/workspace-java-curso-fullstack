@@ -1,0 +1,13 @@
+
+public class Bicicleta extends Vehiculo{
+	
+	private int cambios;
+	
+	
+	// constructor
+	public Bicicleta(float velocidad, int asientos, int orientacionRuedas, int cambios) {
+		super(velocidad, asientos, orientacionRuedas);
+		this.cambios = cambios;
+	}
+	
+}

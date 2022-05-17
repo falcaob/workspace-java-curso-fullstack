@@ -1,0 +1,10 @@
+
+public class Coche {
+	
+	// declarando atributos
+	float velocidad;
+	float caballos;
+	int asientos;
+	int orientacionRuedas;
+
+}

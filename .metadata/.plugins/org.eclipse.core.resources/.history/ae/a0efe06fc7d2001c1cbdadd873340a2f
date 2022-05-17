@@ -1,0 +1,19 @@
+
+public class Main3 {
+
+	public static void main(String[] args) {
+		// crear varios objetos de la clase Coche
+		// funciona Coche porque estan en el mismo paquete
+		// paquete es un conjunto de clases
+		Coche audio = new Coche();
+		Coche nissan = new Coche();
+		
+		//System.out.println(audio.caballos);
+		
+		// crear varios objetos de la clase estudiante
+		Estudiante estudiante1 = new Estudiante();
+		Estudiante estudiante2 = new Estudiante();
+
+	}
+
+}

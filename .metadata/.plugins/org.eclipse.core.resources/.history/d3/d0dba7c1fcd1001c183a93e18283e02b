@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Ejercicio7 {
+
+	public static void main(String[] args) {
+		/*
+		 * Escribe un programa que obtenga los numeross enteros comprendidos entre dos
+		 * numeros introducidos por teclado y validados como distintos
+		 */
+		
+		Scanner keyboard = new Scanner(System.in);
+		System.out.print("Introduzca un numero: ");
+		int numero = keyboard.nextInt();
+		System.out.print("Introduzca otro numero: ");
+		int numero2 = keyboard.nextInt();
+		
+		
+		
+		keyboard.close();
+	}
+
+}
