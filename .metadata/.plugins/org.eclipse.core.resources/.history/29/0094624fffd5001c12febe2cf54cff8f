@@ -1,0 +1,11 @@
+
+public class Gestor {
+	
+	private int id;
+	private String usuario;
+	private String password;
+	private String correo;
+	
+	
+
+}

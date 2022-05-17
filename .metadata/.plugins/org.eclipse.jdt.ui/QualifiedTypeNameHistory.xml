@@ -5,4 +5,5 @@
     <fullyQualifiedTypeName name="Ejercicio10EsPrimo"/>
     <fullyQualifiedTypeName name="Ejercicio11Conversor"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.security.auth.callback.TextOutputCallback"/>
 </qualifiedTypeNameHistroy>

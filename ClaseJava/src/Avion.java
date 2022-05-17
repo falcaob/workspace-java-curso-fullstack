@@ -35,6 +35,12 @@ public class Avion extends Vehiculo {
 			this.trenAterrizaje = trenAterrizaje;
 		}
 		
+		// el metodo abstracto para de la clase Vehiculo se esta sobreescribiendo
+		@Override
+		public void parar() {
+			System.out.println("Metodo parar de avion");
+			
+		}
 		
 
 }

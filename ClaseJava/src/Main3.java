@@ -26,6 +26,9 @@ public class Main3 {
 		Bicicleta bici1 = new Bicicleta(20.0f, 1, 5, 21);
 		bici1.parar();
 		
+		// no se puede crear un objeto de una clase abstracta
+		// Vehiculo vehiculo = new Vehiculo();
+		
 		
 		//System.out.println(audi.getCaballos());
 		//audi.setCaballos(230.0f);
