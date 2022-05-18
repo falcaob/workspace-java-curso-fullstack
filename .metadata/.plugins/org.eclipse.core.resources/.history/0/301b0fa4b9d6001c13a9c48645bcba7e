@@ -1,0 +1,25 @@
+package antiguo;
+
+import java.util.ArrayList;
+
+public class Ejercicio13ArrayList {
+
+	public static void main(String[] args) {
+
+		/*
+		 * Ejercicio: escribe un programa con un ArrayList que almacene los nombres
+		 * de tres colores. A continuacion, crea otro ArrayList vacio e inserta en el
+		 * todos los elementos del primer ArrayList mediante un forEach.
+		 */
+		
+		ArrayList<String> colores = new ArrayList<String>();
+		colores.add("rojo");
+		colores.add("azul");
+		colores.add("verde");
+		
+		ArrayList<String> vacio = new ArrayList<String>();
+		vacio.add(colores);
+
+	}
+
+}

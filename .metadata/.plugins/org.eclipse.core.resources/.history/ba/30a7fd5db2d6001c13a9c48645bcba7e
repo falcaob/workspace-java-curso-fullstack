@@ -1,0 +1,16 @@
+package antiguo;
+
+public class Ejercicio12StringBuilder {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * Ejercicio: escribe un programa que concatene dos StringBuilder, utilizando
+		 * append y tambien el operador concatenacion.
+		 */
+		StringBuilder strb1 = new StringBuilder("hola");
+		
+
+	}
+
+}

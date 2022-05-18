@@ -39,7 +39,7 @@ public class Main4String {
 		
 		
 		
-		// n�mero de milisegundos desde el 1/1/1970 (formato UNIX)
+		// nmero de milisegundos desde el 1/1/1970 (formato UNIX)
 		long tiempoInicial = System.currentTimeMillis();
 		
 		String numeros = "";

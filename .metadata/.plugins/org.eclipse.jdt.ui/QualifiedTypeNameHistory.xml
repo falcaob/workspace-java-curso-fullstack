@@ -4,6 +4,9 @@
     <fullyQualifiedTypeName name="Ejercicio9Metodos"/>
     <fullyQualifiedTypeName name="Ejercicio10EsPrimo"/>
     <fullyQualifiedTypeName name="Ejercicio11Conversor"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="javax.security.auth.callback.TextOutputCallback"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>
