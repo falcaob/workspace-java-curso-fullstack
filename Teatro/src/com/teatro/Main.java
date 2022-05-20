@@ -46,6 +46,8 @@ public class Main {
 				obra.mostrarLocalidadesOcupadas();
 			} else if (eleccion == 4) {
 				obra.venderLocalidad(keyboard);
+			} else if(eleccion == 5) {
+				obra.cancelarLocalidad(keyboard);
 			}
 
 		} while (eleccion != 8);
