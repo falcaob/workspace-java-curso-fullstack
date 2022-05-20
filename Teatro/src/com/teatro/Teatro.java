@@ -23,8 +23,7 @@ public class Teatro {
 		// inserta 50 localidades (5 filas x 10 butacas) en el ArrayList
 		for(int fila=0; fila<5; fila++) {			
 			for(int butaca=0; butaca<10; butaca++) {
-				Localidad localidad = new Localidad(false, fila, butaca, null, 0, null, 				0.0);			
-				localidades.add(localidad);
+				Localidad localidad = new Localidad(false, fila, butaca, null, 0, null, 0.0);			
 				this.localidades.add(localidad);
 			}
 		}		

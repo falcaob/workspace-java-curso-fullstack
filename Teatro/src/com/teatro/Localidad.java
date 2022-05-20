@@ -48,6 +48,40 @@ public class Localidad {
 		this.precioTotal = 0.0;
 	}
 	
+	public void reservarLocalidad(String nombre, int telefono, int edad, double precio) {
+		this.ocupado = true;
+		this.nombre = nombre;
+		this.telefono = telefono;
+		
+		if((edad >= 0) && (edad <= 12)) {
+			this.tipo = "INFANTIL";
+			this.precioTotal = precio - precio * 0.5;
+		}
+		else if((edad >= 13) && (edad <= 17)) {
+			this.tipo = "MENOR";
+			this.precioTotal = precio - precio * 0.2;
+		}
+		else if((edad >= 18) && (edad <= 64)) {
+			this.tipo = "MAYOR";
+			this.precioTotal = precio;
+		}
+		else if (edad >= 65) {
+			this.tipo = "JUBILADO";
+			this.precioTotal = precio - precio * 0.66;
+		}
+		
+		/*
+		 * Cálculo del precio
+		 */
+		
+		// if(this.tipo === "INFANTIL") (JavaScript)
+		// sí el precio coincide con ...
+		//if(this.tipo.equals("INFANTIL")) {
+		//	this.precioTotal = precio / 2;
+		
+	}
+	
+	
 	
 	// getters and setters
 
@@ -98,6 +132,7 @@ public class Localidad {
 	public int getButaca() {
 		return butaca;
 	}
+
 	
 	
 	

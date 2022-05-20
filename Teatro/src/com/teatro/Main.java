@@ -8,8 +8,10 @@ public class Main {
 		
 		Obra obra = new Obra("LA BOMBILLA DE DON BLAS", "Sol, 45", 300, 2, "La cena de los idiotas", 		"comedia", 95, 30.0);
 		
+		//System.out.println(obra.getLocalidades().size()); //error, tengo 50 localidades
+		
 		// mostramos el menú
-		Main.menu(obra);
+		 Main.menu(obra);
 	}
 	
 	
@@ -27,7 +29,7 @@ public class Main {
 			System.out.println("-------------------------------");
 			System.out.println("1. Ver la programación actual");
 			System.out.println("2. Mostrar todas las localidades");
-			System.out.println("3. Mostrar localides oupadas");
+			System.out.println("3. Mostrar localides ocupadas");
 			System.out.println("4. Vender localidad");
 			System.out.println("5. Cancelar localidad");
 			System.out.println("6. Consultar localidad");
@@ -41,9 +43,9 @@ public class Main {
 			} else if (eleccion == 2) {
 				obra.mostrarTodasLocalidades();
 			} else if (eleccion == 3) {
-				//Main7.menuTransferencias();
-			} else if (eleccion == 6) {
-				System.out.println("Salir");
+				obra.mostrarLocalidadesOcupadas();
+			} else if (eleccion == 4) {
+				obra.venderLocalidad(keyboard);
 			}
 
 		} while (eleccion != 8);
