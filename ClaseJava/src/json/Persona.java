@@ -8,13 +8,17 @@ public class Persona {
 	private int edad;
 	private String nombre;
 	private ArrayList<String> aficiones;
+	private boolean funcionario;
+	private Direccion direccion; // objeto de direfente clase
 	
 	
 	// constructor parametrizado
-	public Persona(int edad, String nombre, ArrayList<String> aficcion) {
+	public Persona(int edad, String nombre, ArrayList<String> aficcion, boolean funcionario) {
 		this.edad = edad;
 		this.nombre = nombre;
 		this.aficiones = new ArrayList<String>();
+		this.funcionario = funcionario;
+		this.direccion = new Direccion("Castilla", 169);
 	}
 
 
@@ -54,6 +58,27 @@ public class Persona {
 	public ArrayList<String> getAficcion() {
 		return aficiones;
 	}
-		
+
+
+	public boolean isFuncionario() {
+		return funcionario;
+	}
+
+
+	public void setFuncionario(boolean funcionario) {
+		this.funcionario = funcionario;
+	}
+
+
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
+	
+	
 
 }
