@@ -48,6 +48,12 @@ public class Main {
 				obra.venderLocalidad(keyboard);
 			} else if(eleccion == 5) {
 				obra.cancelarLocalidad(keyboard);
+			} else if(eleccion == 6) {
+				obra.consultarLocalidad(keyboard);
+			} else if(eleccion == 7) {
+				obra.calcularRecaudacion();
+			} else if(eleccion == 8) {
+				System.out.println("Hasta pronto");
 			}
 
 		} while (eleccion != 8);

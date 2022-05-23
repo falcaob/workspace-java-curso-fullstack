@@ -177,7 +177,7 @@ public class Obra extends Teatro {
 
 	}
 
-	
+	// opción 5
 	public void cancelarLocalidad(Scanner keyboard) {
 
 		System.out.println("¿Fila (0-4)?");
@@ -189,10 +189,54 @@ public class Obra extends Teatro {
 		for(Localidad localidad : this.localidades) {
 			if((localidad.getFila() == fila) && (localidad.getButaca() == butaca)) {
 				// en este punto del programa sabemos que la localidad existe
+				
+				// si está ocupada la localidad, cancelamos la reserva
+				if(localidad.isOcupado()) {
+					// aquí para que selga el nombre del cliente
+					System.out.println(localidad.getNombre() + " ha cancelado la reserva");
+					
+					// metodo que resetea los valores del cliente
+					localidad.cancelarLocalidad();
+					
+				}
+				else {
+					System.out.println("La plaza está libre");
+				} 
+				
 			}
 		}
 		
 
 	}
 
+	public void consultarLocalidad(Scanner keyboard) {
+		
+		System.out.println("¿Fila (0-4)?");
+		int fila = keyboard.nextInt();
+		
+		System.out.println("¿Butaca (0-9)?");
+		int butaca = keyboard.nextInt();
+		
+		for(Localidad localidad : this.localidades) {
+			if ((localidad.getFila() == fila) && (localidad.getButaca() == butaca)) {
+				localidad.mostrarLocalidad();
+			}
+		}
+			
+	}
+
+	public void calcularRecaudacion() {
+		
+		double recaudacionTotal = 0.0;
+		
+		for(Localidad localidad : this.localidades) {
+			recaudacionTotal += localidad.getPrecioTotal();
+		}
+		
+		System.out.println("Recaudación: " + recaudacionTotal);
+		
+	}
+		
 }
+
+

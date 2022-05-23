@@ -33,9 +33,9 @@ public class Localidad {
 		// si la localidad está ocupada
 		else {
 			System.out.println("Localidad ocupada por "  + this.nombre
-					+ ", tlf: " + this.telefono
-					+ " +, Tipo" + this.tipo 
-					+ ", Precio: " + this.precioTotal);
+					+ " ,tlf: " + this.telefono
+					+ " ,Tipo: " + this.tipo 
+					+ " ,Precio: " + this.precioTotal);
 		}
 	}
 	
