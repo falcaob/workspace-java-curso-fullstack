@@ -1,3 +1,4 @@
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,9 +14,10 @@ public class Agenda {
 	// Key / Valor
 	private HashMap<String, Contacto> contactos;
 	
-	// constructor por defecto
+	// constructor 
 	public Agenda() {
 		this.contactos = new HashMap<String, Contacto>();
+		this.leerEnDisco();
 	}
 	
 	public boolean agregarContacto(Contacto nuevocontacto) {
@@ -29,6 +31,9 @@ public class Agenda {
 		}
 		// aquí el nombre no existe y lo agregamos 
 		this.contactos.put(nombre, nuevocontacto);
+		
+		this.escribirEnDisco();
+		
 		return true;
 		
 	}
@@ -42,6 +47,8 @@ public class Agenda {
 				
 		// elimina el contacto de el HashMap de contactos
 		this.contactos.remove(nombre);
+		
+		this.escribirEnDisco();
 				
 		return true;
 	}
@@ -85,9 +92,12 @@ public class Agenda {
 	private void leerEnDisco() {
 		
 		try {
+			// cargo contactos aquí a través del archivo
 			String contenidoJSON = new String ( Files.readAllBytes( Paths.get("agenda.json") ) );
-			Gson gson = new GsonBuilder().setPrettyPrinting().create();
 			
+			Gson gson = new GsonBuilder().setPrettyPrinting().create();
+			Agenda agenda = gson.fromJson(contenidoJSON, Agenda.class);
+			this.contactos = agenda.getContactos();
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -95,4 +105,27 @@ public class Agenda {
 		}
 	}
 
+	public HashMap<String, Contacto> getContactos() {
+		return contactos;
+	}
+	
+	private void escribirEnDisco() {
+		// inicializacion
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		// this para acceder a los atributos de la misma clase donde me encuentro
+		// conversion de objeto Java (Agenda) a String formato JSON
+		String contenidoJSON = gson.toJson(this);
+		
+		try {
+			FileWriter fileWriter = new FileWriter("agenda.json");
+			fileWriter.write(contenidoJSON);
+			fileWriter.close();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	
 }
