@@ -4,6 +4,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Monedero monedero = new Monedero(0.0);
+		// al principio del Main
 		monedero.leerEnDisco();
 		
 		
@@ -11,9 +12,9 @@ public class Main {
 		monedero.meterDinero(25.50);
 		monedero.meterDinero(50.50);
 		
-		monedero.verDinero(0);
-		System.out.println(monedero);
+		monedero.verDinero();
 		
+		// al final del Main
 		monedero.guardarEnDisco();
 	}
 

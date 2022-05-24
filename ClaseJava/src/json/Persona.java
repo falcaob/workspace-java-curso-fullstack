@@ -29,9 +29,11 @@ public class Persona {
 	// sobreescritura de un método
 	@Override
 	public String toString() {
-		return "Persona [edad=" + edad + ", nombre=" + nombre + ", aficiones=" + aficiones + "]";
+		return "Persona [edad=" + edad + ", nombre=" + nombre + ", aficiones=" + aficiones + ", funcionario="
+				+ funcionario + ", direccion=" + direccion + "]";
 	}
 
+	
 	
 	
 	// getters and setters
