@@ -17,7 +17,7 @@ public class Agenda {
 	// constructor 
 	public Agenda() {
 		this.contactos = new HashMap<String, Contacto>();
-		this.leerEnDisco();
+		//this.leerEnDisco();
 	}
 	
 	public boolean agregarContacto(Contacto nuevocontacto) {

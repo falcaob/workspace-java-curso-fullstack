@@ -40,6 +40,7 @@ public class ProgramaAgenda {
 		//System.out.println(agenda.buscarContacto("Ana"));  // Contacto [nombre=Ana, telefono=666555441]
 		//System.out.println(agenda.buscarContacto("Chema")); // null
 		
+		
 		agenda.listarContactos();
 		
 	}

@@ -1,5 +1,5 @@
 
-public abstract class Contacto {
+public class Contacto {
 	
 	protected String nombre;
 	protected int telefono;
@@ -10,7 +10,7 @@ public abstract class Contacto {
 		this.telefono = telefono;
 	}
 
-	public abstract void mostrarInfo();
+	public void mostrarInfo() {}
 	
 	// getters and setters
 	public String getNombre() {
