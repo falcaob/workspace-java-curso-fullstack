@@ -91,7 +91,7 @@ public class Main {
 			} else if (eleccion == 5) {
 				Main.eliminarUsuario(keyboard, conexion);
 			} else if (eleccion == 6) {
-				System.out.println("Salir");
+				System.out.println("Hasta pronto");
 		}
 		
 		} while (eleccion != 6);
@@ -100,15 +100,66 @@ public class Main {
 
 	}
 
+	
 
 	private static void eliminarUsuario(Scanner keyboard, Connection conexion) {
-		// TODO Auto-generated method stub
+		
+		System.out.println("Usuario a eliminar: ");
+		String usuario = keyboard.next();
+		
+		String sql = "SELECT password FROM usuario WHERE usuario=?";
+		
+		try {
+			
+			PreparedStatement instruccion = conexion.prepareStatement(sql);
+			
+			instruccion.setString(1, usuario);
+			
+			ResultSet result = instruccion.executeQuery();		
+			if(!result.next()) {
+				System.out.println("No existe el usuario");
+				return;
+			}
+			
+			sql = String.format("DELETE FROM usuario WHERE usuario='%s'", usuario);
+
+			int registrosEliminados = instruccion.executeUpdate(sql);
+			if (registrosEliminados == 1) {
+				System.out.println("Usuario eliminado correctamente");
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 	}
+	
+	
 
 
 	private static void listarUsuarios(Connection conexion) {
-		// TODO Auto-generated method stub
+		try {
+			
+			// con * me envía todo
+			String sql = "SELECT id, usuario, correo FROM usuario";
+			
+			PreparedStatement instruccion = conexion.prepareStatement(sql);
+			
+			ResultSet resultados = instruccion.executeQuery(sql);
+			
+			while(resultados.next()) {
+				
+				int id = resultados.getInt("id");
+				String usuario = resultados.getString("usuario");
+				String correo = resultados.getString("correo");
+				
+				System.out.println(id  + ". " + usuario + ":" + correo);
+				
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 	}
 
@@ -124,9 +175,11 @@ public class Main {
 		System.out.println("Nuevo password: ");
 		String nuevoPassword = keyboard.next();
 		
+		// buscar en la base de datos si existe el usuario introducido
 		String sql = "SELECT password FROM usuario WHERE usuario=?";
 		
 		try {
+			
 			PreparedStatement instruccion = conexion.prepareStatement(sql);
 			
 			instruccion.setString(1, usuario);
@@ -138,8 +191,16 @@ public class Main {
 			}
 			
 			// en este punto del programa sabemos que el usuario existe y por tanto, podemos cambiar la contraseña
-			String nuevoPasswordSH3 = Main.sha3(nuevoPassword);
+			String nuevoPasswordSHA3 = Main.sha3(nuevoPassword);
 			
+			sql = String.format("UPDATE usuario SET password='%s' WHERE usuario='%s'", 
+					nuevoPasswordSHA3, usuario);
+			
+			int registrosActualizados = instruccion.executeUpdate(sql);
+			
+			if(registrosActualizados == 1) {
+				System.out.println("Usuario actualizado correctamente");
+			}
 			
 			
 		} catch (SQLException e) {
@@ -168,7 +229,6 @@ public class Main {
 		String password = keyboard.next();
 		
 		try {
-			
 			
 			String sql = "SELECT * FROM usuario WHERE usuario=? AND password=?";
 			PreparedStatement instruccion = conexion.prepareStatement(sql);
@@ -272,6 +332,7 @@ public class Main {
 		 */
 		
 		try {
+			
 			Statement instruccion = conexion.createStatement();
 			
 			//String sql = "INSERT INTO usuario (usuario, password, correo VALUES ('" + usuario + "', " + password + "','" + correo + "')";
